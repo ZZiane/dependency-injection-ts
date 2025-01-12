@@ -1,6 +1,6 @@
 import { Injectable } from "../lib/decorators/Injectable";
 
-@Injectable("EmployeeService")
+@Injectable()
 export default class EmployeeService {
   constructor() {}
   print() {

@@ -2,7 +2,7 @@ import { classRegistry } from "../utils/ClassRegister";
 import { Container } from "../utils/Container";
 import "reflect-metadata";
 
-export function Injectable(key: string) {
+export function Injectable(key?: string) {
   return function (constructor: Function) {
     const paramTypes: any[] =
       Reflect.getMetadata("design:paramtypes", constructor) || [];
