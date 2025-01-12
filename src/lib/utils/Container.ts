@@ -16,7 +16,6 @@ export class Container {
   static create<T>(target: { new (...args: any[]): T }): T {
     const paramTypes: string[] =
       Reflect.getMetadata("design:paramtypes", target) || [];
-    console.log(paramTypes);
     const params = paramTypes.map((token) => this.resolve(token));
     return new target(...params);
   }
